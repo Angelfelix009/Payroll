@@ -36,6 +36,10 @@ Route::post('/register',function (){
 });
 
 Route::post('/change-role',[UserSetting::class,'change_role'])->name('change-role');
+Route::get('/change-password',[UserSetting::class,'change_password'])->name('change-password');
+Route::post('/change-password',[UserSetting::class,'update_password'])->name('update-password');
+Route::get('/change-picture',[UserSetting::class,'change_picture'])->name('change-picture');
+Route::post('/change-picture',[UserSetting::class,'update_picture'])->name('update-picture');
 
 Route::resource('/user',UserController::class);
 Route::resource('/bank',BankController::class);

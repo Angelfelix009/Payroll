@@ -64,21 +64,21 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="hidden-xs">Admin</span>
+                            <span class="hidden-xs">{{Auth::user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Menu Body -->
                             <!-- Menu Footer-->
                             <li><h4>Welcome</h4></li>
-                            <li><a href=""><span class="fa fa-user"></span>Edit Profile</a></li>
-                            <li><a href=""><span class="fa fa-gear"></span>Change Password</a></li>
+                            <li><a href="{{route('change-picture')}}"><span class="fa fa-user"></span>Edit Profile Picture</a></li>
+                            <li><a href="{{route('change-password')}}"><span class="fa fa-gear"></span>Change Password</a></li>
                             <li> <a class="dropdown-item" href=""
                                     onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
                                     <span class="fa fa-power-off"></span> {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                             </li>
