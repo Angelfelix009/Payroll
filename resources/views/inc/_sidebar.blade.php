@@ -50,7 +50,8 @@
                             <span class="pull-right-container"></span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href=""><i class="fa fa-user-plus"></i>1</a> </li>
+                            <li><a href="{{route('pension.create')}}"><i class="fa fa-plus"></i>Register new PensionFA</a> </li>
+                            <li><a href="{{route('pension.index')}}"><i class="fa fa-eye"></i>View all PensionFA</a> </li>
                         </ul>
                     </li>
                     <li class="treeview"><a href="#"><i class="fa fa-gear"></i>

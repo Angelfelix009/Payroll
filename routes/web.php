@@ -8,6 +8,7 @@ use App\Http\Controllers\User\PagesController as UserSetting;
 use App\Http\Controllers\Bank\BankController;
 use App\Http\Controllers\Branch\BranchController;
 use App\Http\Controllers\State\StateController;
+use App\Http\Controllers\Pension\PensionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +41,4 @@ Route::resource('/user',UserController::class);
 Route::resource('/bank',BankController::class);
 Route::resource('/state',StateController::class);
 Route::resource('/branch',BranchController::class);
+Route::resource('/pension',PensionController::class);
